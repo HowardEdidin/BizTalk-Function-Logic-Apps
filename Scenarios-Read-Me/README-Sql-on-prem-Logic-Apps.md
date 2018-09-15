@@ -89,14 +89,11 @@ $env:computername
 Configure the SQL Connection
 ![Configure SQL Connection](../Media/Scenario-Sql-on-prem-Logic-Apps/logic-app-config-step-2.png 'Configure SQL Connection')
 
-Set which table to use for 'Get Rows'
+When we get rows, we'll want to specify which table to use in this connector.  If we've successfully connected to the db and stood up the proper tables, we should be able to view them in the menu.
 ![Get Rows](../Media/Scenario-Sql-on-prem-Logic-Apps/logic-app-config-step-3.png 'Get Rows')
 
 Click on Save Button, then run the application, then view the designer.
-Set which table to use for 'Get Rows'
 ![Run a test](../Media/Scenario-Sql-on-prem-Logic-Apps/logic-app-config-step-4.png 'Run a test')
 
-We'll be able to check the results of the step.
-
-Set which table to use for 'Get Rows'
+We'll be able to check the results of the step.  Validate the results for fetching the rows in the table.
 ![Validate Result](../Media/Scenario-Sql-on-prem-Logic-Apps/logic-app-config-step-5.png 'Validate Results')
