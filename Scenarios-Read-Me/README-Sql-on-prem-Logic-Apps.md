@@ -60,23 +60,29 @@ Make sure to install the application gateway.  Once installed, we'll want to cre
 1. [Using Logic Apps Gateway](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-gateway-connection)
 
 Work through the installation wizard.
+
 ![Configure App Gatway.](../Media/Scenario-Sql-on-prem-Logic-Apps/app-gateway-step-1.png 'Step 1')
 
 Once the wizard is finished, we should be able to create a corresponding gateway.
+
 ![Wizard finished.](../Media/Scenario-Sql-on-prem-Logic-Apps/app-gateway-step-2.png 'Step 2')
 
-Create Connection Gateway in Azure.
+Create Connection Gateway in Azure.  We should be able to point to the Application Gateway that we're running.
+
 ![Create Conection Gateway.](../Media/Scenario-Sql-on-prem-Logic-Apps/app-gateway-step-3.png 'Step 3')
 
 Check Configuration for Connection Gateway in Portal.
+
 ![Check Configuration for Connection Gateway in Portal](../Media/Scenario-Sql-on-prem-Logic-Apps/app-gateway-step-4.png 'Step 4')
 
 #### Create A Logic App
 
-We'll now create a logic app.
+We'll now create a logic app in the portal to validate that we can reach the on premise database.
+
 ![Create a Logic App](../Media/Scenario-Sql-on-prem-Logic-Apps/create-logic-app-1.png 'Create A Logic App')
 
 We'll use a trigger in the logic app.  In this case, we'll just set up recurrence for testing.
+
 ![Recurrence Trigger](../Media/Scenario-Sql-on-prem-Logic-Apps/logic-app-config-step-1.png 'Recurrence Trigger')
 
 We can now add another action for the trigger.  In this case, we'll use SQL get rows.  Note that the server name in this case is the sql server host.  We'll use the container host name.
@@ -86,14 +92,18 @@ Run this on the host
 $env:computername
 ```
 
-Configure the SQL Connection
+Configure the SQL Connection.  We'll want to make sure to point to the server which in this case is the name of the container host.
+
 ![Configure SQL Connection](../Media/Scenario-Sql-on-prem-Logic-Apps/logic-app-config-step-2.png 'Configure SQL Connection')
 
 When we get rows, we'll want to specify which table to use in this connector.  If we've successfully connected to the db and stood up the proper tables, we should be able to view them in the menu.
+
 ![Get Rows](../Media/Scenario-Sql-on-prem-Logic-Apps/logic-app-config-step-3.png 'Get Rows')
 
 Click on Save Button, then run the application, then view the designer.
+
 ![Run a test](../Media/Scenario-Sql-on-prem-Logic-Apps/logic-app-config-step-4.png 'Run a test')
 
 We'll be able to check the results of the step.  Validate the results for fetching the rows in the table.
+
 ![Validate Result](../Media/Scenario-Sql-on-prem-Logic-Apps/logic-app-config-step-5.png 'Validate Results')
