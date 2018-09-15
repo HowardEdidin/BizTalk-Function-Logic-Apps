@@ -1,0 +1,46 @@
+{
+    "$connections": {
+        "value": {
+            "sql": {
+                "connectionId": "/subscriptions/<mysubid>/resourceGroups/<mylogicapp>/providers/Microsoft.Web/connections/sql-9",
+                "connectionName": "sql-9",
+                "id": "/subscriptions/<mysubid>/providers/Microsoft.Web/locations/westcentralus/managedApis/sql"
+            }
+        }
+    },
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Get_rows": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['sql']['connectionId']"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[dbo].[ContactType]'))}/items"
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "defaultValue": {},
+                "type": "Object"
+            }
+        },
+        "triggers": {
+            "Recurrence": {
+                "recurrence": {
+                    "frequency": "Second",
+                    "interval": 3
+                },
+                "type": "Recurrence"
+            }
+        }
+    }
+}
