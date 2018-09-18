@@ -1,0 +1,103 @@
+{
+    "$connections": {
+        "value": {
+            "office365": {
+                "connectionId": "/subscriptions/<mysubid>/resourceGroups/andy-bt-la-test/providers/Microsoft.Web/connections/office365",
+                "connectionName": "office365",
+                "id": "/subscriptions/<mysubid>/providers/Microsoft.Web/locations/westcentralus/managedApis/office365"
+            },
+            "sql": {
+                "connectionId": "/subscriptions/<mysubid>/resourceGroups/andy-bt-la-test/providers/Microsoft.Web/connections/sql-9",
+                "connectionName": "sql-9",
+                "id": "/subscriptions/<mysubid>/providers/Microsoft.Web/locations/westcentralus/managedApis/sql"
+            }
+        }
+    },
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "For_each": {
+                "actions": {
+                    "Send_an_email": {
+                        "inputs": {
+                            "body": {
+                                "Body": "This is a Logic App Test. My Contact Type:@{items('For_each')?['ContactType']}  My Contact Type ID: @{items('For_each')?['ID']}",
+                                "Subject": "Logic App Test",
+                                "To": "mytest@test.com"
+                            },
+                            "host": {
+                                "connection": {
+                                    "name": "@parameters('$connections')['office365']['connectionId']"
+                                }
+                            },
+                            "method": "post",
+                            "path": "/Mail"
+                        },
+                        "runAfter": {},
+                        "type": "ApiConnection"
+                    }
+                },
+                "foreach": "@body('Get_rows')?['value']",
+                "runAfter": {
+                    "Get_rows": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Foreach"
+            },
+            "Get_rows": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['sql']['connectionId']"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[dbo].[ContactType]'))}/items"
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            },
+            "Send_an_email_2": {
+                "inputs": {
+                    "body": {
+                        "Body": "Logic App Call for getting rows from database timed out.",
+                        "Subject": "Logic App Call - DB Fetch Failed",
+                        "To": "mytest@test.com"
+                    },
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['office365']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/Mail"
+                },
+                "runAfter": {
+                    "Get_rows": [
+                        "TimedOut",
+                        "Failed"
+                    ]
+                },
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "defaultValue": {},
+                "type": "Object"
+            }
+        },
+        "triggers": {
+            "Recurrence": {
+                "recurrence": {
+                    "frequency": "Minute",
+                    "interval": 5
+                },
+                "type": "Recurrence"
+            }
+        }
+    }
+}
