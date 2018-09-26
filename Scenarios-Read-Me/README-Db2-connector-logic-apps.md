@@ -8,7 +8,5 @@ These will describe some of the concepts that we're using in this scenario.
 1. [Using Logic Apps Connector for DB2](https://docs.microsoft.com/en-us/azure/connectors/connectors-create-api-db2)
 1. [Logic Apps Gateway](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-gateway-connection)
 1. [Install Logic Apps Gateway](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-gateway-install)
-
-
-		
+1. [Logic Apps using Integration Service Environment](https://docs.microsoft.com/en-us/azure/logic-apps/connect-virtual-network-vnet-isolated-environment)
 		
