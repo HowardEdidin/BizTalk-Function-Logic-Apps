@@ -11,6 +11,12 @@ We can use Logic Apps to call Azure Functions.  Of course, if we want, we can al
 1. [Call Existing Function Apps](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-azure-functions#add-existing-functions-to-logic-apps)
 1. [Call Logic Apps from Functions](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-http-endpoint)
 
+# Overall Workflow
+
+We'll use an HTTP trigger and a function from a function app.  In the function app, we'll use C# + CORS to call to it from the Logic App.  We'll conditionally send an email whether we were successful or not.
+
+![Overall Workflow](../Media/Scenario-Call-Azure-Functions/logic-app-create-function-app-0.png 'Overall Workflow')
+
 # Create a Logic App
 
 We'll use the Azure Portal to create a Logic App.
@@ -192,3 +198,4 @@ In the successful test, we'll receive a friendly email.
 In the failure test, we'll receive an email with the issue.
 
 ![Failure Test Email](../Media/Scenario-Call-Azure-Functions/logic-app-create-function-app-25.png 'Failure Test Email')
+

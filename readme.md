@@ -8,6 +8,7 @@ We'll put together some samples in order to work with BizTalk and Logic Apps.
 1.  [Send Email (SMTP)](Scenarios-Read-Me/README-Send-email.md)
 1.  [Conditional with For-Each Loop](Scenarios-Read-Me/README-Conditional-for-each.md)
 1.  [Db2 Connector with Logic Apps](Scenarios-Read-Me/README-Db2-connector-logic-apps.md)
-1.  [Business Rules Engine](Scenarios-Read-Me/README-Business-Rules-Engine)
+1.  [Business Rules Engine](Scenarios-Read-Me/README-Business-Rules-Engine.md)
+1.  [Call Azure Functions](Scenarios-Read-Me/README-Call-Azure-Functions.md)
 
 
