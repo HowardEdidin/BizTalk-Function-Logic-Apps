@@ -1,0 +1,90 @@
+
+{
+    "$connections": {
+        "value": {
+            "office365": {
+                "connectionId": "/subscriptions/<mysubid>/resourceGroups/<myrg>/providers/Microsoft.Web/connections/office365",
+                "connectionName": "office365",
+                "id": "/subscriptions/<mysubid>/providers/Microsoft.Web/locations/westcentralus/managedApis/office365"
+            }
+        }
+    },
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "HttpTriggerCSharp1": {
+                "inputs": {
+                    "body": "@triggerBody()",
+                    "function": {
+                        "id": "/subscriptions/<mysubid>/resourceGroups/<myrg>/providers/Microsoft.Web/sites/andy-fa-test/functions/HttpTriggerCSharp1"
+                    }
+                },
+                "runAfter": {},
+                "type": "Function"
+            },
+            "Send_an_email": {
+                "inputs": {
+                    "body": {
+                        "Body": "@{body('HttpTriggerCSharp1')}",
+                        "Subject": "Hello from Logic Apps",
+                        "To": "angee@microsoft.com"
+                    },
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['office365']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/Mail"
+                },
+                "runAfter": {
+                    "HttpTriggerCSharp1": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection"
+            },
+            "Send_an_email_2": {
+                "inputs": {
+                    "body": {
+                        "Body": "@{body('HttpTriggerCSharp1')}",
+                        "Subject": "A Different Hello From Logic Apps",
+                        "To": "angee@microsoft.com"
+                    },
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['office365']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/Mail"
+                },
+                "runAfter": {
+                    "HttpTriggerCSharp1": [
+                        "Failed",
+                        "TimedOut"
+                    ]
+                },
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "defaultValue": {},
+                "type": "Object"
+            }
+        },
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "method": "POST",
+                    "schema": {}
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    }
+}

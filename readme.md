@@ -1,6 +1,6 @@
 # BizTalk to Azure with Functions and Logic Apps
 
-We'll put together some samples in order to work with BizTalk and Logic Apps.
+We'll put together some samples in order to work with BizTalk and Logic Apps.  This is a good [intro to Logic Apps](https://docs.microsoft.com/en-us/azure/connectors/apis-list).
 
 1.  [SQL on prem with data gateway with Logic Apps](Scenarios-Read-Me/README-Sql-on-prem-Logic-Apps.md)
 1.  [One process calls another process](Scenarios-Read-Me/README-One-Process-Another-Process.md)

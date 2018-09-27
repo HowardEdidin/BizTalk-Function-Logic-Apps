@@ -2,12 +2,12 @@
     "$connections": {
         "value": {
             "office365": {
-                "connectionId": "/subscriptions/<mysubid>/resourceGroups/andy-bt-la-test/providers/Microsoft.Web/connections/office365",
+                "connectionId": "/subscriptions/<mysubid>/resourceGroups/<myrg>/providers/Microsoft.Web/connections/office365",
                 "connectionName": "office365",
                 "id": "/subscriptions/<mysubid>/providers/Microsoft.Web/locations/westcentralus/managedApis/office365"
             },
             "sql": {
-                "connectionId": "/subscriptions/<mysubid>/resourceGroups/andy-bt-la-test/providers/Microsoft.Web/connections/sql-9",
+                "connectionId": "/subscriptions/<mysubid>/resourceGroups/<myrg>/providers/Microsoft.Web/connections/sql-9",
                 "connectionName": "sql-9",
                 "id": "/subscriptions/<mysubid>/providers/Microsoft.Web/locations/westcentralus/managedApis/sql"
             }
