@@ -1,4 +1,5 @@
-## Using Business Rules Engine
+## Logic Apps Overview
+
 We can add different actions together as part of a logic app.  The conditions are based around results of prior steps.
 
 We're going to 'run through' a lab from a [Logic Apps Repo](https://github.com/codingwithsasquatch/serverless_ninjas_workshop).
