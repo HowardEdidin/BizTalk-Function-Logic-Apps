@@ -14,7 +14,7 @@ We're going to 'run through' a lab from a [Logic Apps Repo](https://github.com/c
 
 # Serverless Logic App Demo
 
-The Logic App demo is designed to be delivered during the Logic App presenation.  The demo is based off a real-world Logic App implementation, though the data has been changed.
+The demo is based off a real-world Logic App implementation, though the data has been changed.
 
 The following Logic App will upload a file that contains a list of characters from Marvel's database.  The list is in a json document, with pipeline delimited text to define the characteristics the charcter.
 
