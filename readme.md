@@ -11,5 +11,5 @@ We'll put together some samples in order to work with BizTalk and Logic Apps.  T
 1.  [Business Rules Engine](Scenarios-Read-Me/README-Business-Rules-Engine.md)
 1.  [Call Azure Functions](Scenarios-Read-Me/README-Call-Azure-Functions.md)
 1.  [Using Azure Service Bus Connector](Scenarios-Read-Me/README-Call-Service-Bus.md)
-
+1.  [Using a Custom Connector for WCF](Scenarios-Read-Me/README-On-Prem-HTTP-Custom-Connector.md)
 
