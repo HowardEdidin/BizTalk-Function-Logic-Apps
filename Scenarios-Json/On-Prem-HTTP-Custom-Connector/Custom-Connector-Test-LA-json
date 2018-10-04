@@ -1,0 +1,49 @@
+{
+    "$connections": {
+        "value": {
+            "andy-http-test": {
+                "connectionId": "/subscriptions/<mysubid>/resourceGroups/<myrg>/providers/Microsoft.Web/connections/andy-http-test-1",
+                "connectionName": "andy-http-test-1",
+                "id": "/subscriptions/<mysubid>/resourceGroups/<myrg>/providers/Microsoft.Web/customApis/andy-http-test"
+            }
+        }
+    },
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Get_Service_Landing_Page": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['andy-http-test']['connectionId']"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/",
+                    "queries": {
+                        "wsdl": "1"
+                    }
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "defaultValue": {},
+                "type": "Object"
+            }
+        },
+        "triggers": {
+            "Recurrence": {
+                "recurrence": {
+                    "frequency": "Minute",
+                    "interval": 3
+                },
+                "type": "Recurrence"
+            }
+        }
+    }
+}

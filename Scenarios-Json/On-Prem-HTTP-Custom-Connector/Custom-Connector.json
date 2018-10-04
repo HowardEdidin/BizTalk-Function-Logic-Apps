@@ -1,0 +1,45 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "SOAP pass-through",
+      "description": "SOAP pass-through",
+      "version": "1.0"
+    },
+    "host": "containerip",
+    "basePath": "/Service1.svc",
+    "consumes": [],
+    "produces": [],
+    "paths": {
+      "/SoapPassThrough": {},
+      "/Service1.svc": {},
+      "/": {
+        "get": {
+          "operationId": "SoapPassThrough",
+          "parameters": [
+            {
+              "name": "wsdl",
+              "in": "query",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          },
+          "summary": "Get Service Landing Page",
+          "description": "Get Service Landing Page"
+        }
+      }
+    },
+    "definitions": {},
+    "parameters": {},
+    "responses": {},
+    "securityDefinitions": {},
+    "security": [],
+    "tags": [],
+    "schemes": [
+      "http"
+    ]
+  }
