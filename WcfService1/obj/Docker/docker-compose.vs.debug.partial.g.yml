@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  wcfservice1:
+    image: wcfservice1:dev
+    build:
+      args:
+        source: obj/Docker/empty/
+    volumes:
+      - C:\Users\angee\source\repos\WcfService1\WcfService1:C:\inetpub\wwwroot
+      - :C:\remote_debugger:ro
+    entrypoint: cmd /c "start /B C:\\ServiceMonitor.exe w3svc & C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646"
+

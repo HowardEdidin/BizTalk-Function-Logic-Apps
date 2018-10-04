@@ -1,0 +1,1 @@
+C:\Users\angee\source\repos\WcfService1\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

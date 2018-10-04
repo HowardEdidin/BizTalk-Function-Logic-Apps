@@ -1,0 +1,13 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  wcfservice1:
+    build:
+      context: C:\Users\angee\source\repos\WcfService1\WcfService1
+      dockerfile: Dockerfile
+    image: wcfservice1
+    ports:
+    - target: 80
+version: '3.4'
