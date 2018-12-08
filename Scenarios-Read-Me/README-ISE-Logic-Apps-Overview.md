@@ -214,7 +214,7 @@ We'll want to search in the Azure Portal for the **Integration Service Environme
 
 We'll want to make sure to select **4 empty subnets** in the **cloud VNET**.
 
-![Set up ISE](../media/Scenario-ISE-Logic-Apps-Overview/create-ise-1.jpg)
+![Set up ISE](../Media/Scenario-ISE-Logic-Apps-Overview/create-ise-1.jpg)
 
 > This from the [Current Documentation](https://docs.microsoft.com/en-us/azure/logic-apps/connect-virtual-network-vnet-isolated-environment) as of this writing.  Please refer to the existing documentation for the latest and greatest.  It is also helpful to understand ISE configuration considerations, especially with respect to the **VNET** and **Subnets**.
 
@@ -231,33 +231,33 @@ We'll want to make sure to select **4 empty subnets** in the **cloud VNET**.
 
 We can validate the subnet selection, and the VNET selection.
 
-![Validate ISE Settings](../media/Scenario-ISE-Logic-Apps-Overview/create-ise-2.jpg)
+![Validate ISE Settings](../Media/Scenario-ISE-Logic-Apps-Overview/create-ise-2.jpg)
 
 Assuming that we have network requirements met, as well as permissions for the Logic Apps in Azure AD, and a couple hours:
 
-![ISE Created](../media/Scenario-ISE-Logic-Apps-Overview/create-ise-3.jpg)
+![ISE Created](../Media/Scenario-ISE-Logic-Apps-Overview/create-ise-3.jpg)
 
 ## Create a Logic App with ISE Connector
 
 We can set up a Logic App, and point to the ISE as the location.
 
-![Logic App with ISE location](../media/Scenario-ISE-Logic-Apps-Overview/create-la-1.jpg)
+![Logic App with ISE location](../Media/Scenario-ISE-Logic-Apps-Overview/create-la-1.jpg)
 
 We can use the recurrence template for the Logic App.  In the Logic App designer, we can choose an action.  For this example, we'll want to use the ISE SQL Connector.
 
-![Logic App with ISE SQL Connector Action](../media/Scenario-ISE-Logic-Apps-Overview/create-la-2.jpg)
+![Logic App with ISE SQL Connector Action](../Media/Scenario-ISE-Logic-Apps-Overview/create-la-2.jpg)
 
 We can set the ISE Connection information for SQL.  We can use the domain user name as well with Windows Authentication.  We're also simplifying by using the private IP instead of the FQDN for the SQL VM.
 
-![ISE SQL Connection Information](../media/Scenario-ISE-Logic-Apps-Overview/create-la-3.jpg)
+![ISE SQL Connection Information](../Media/Scenario-ISE-Logic-Apps-Overview/create-la-3.jpg)
 
 Assuming that we have proper network connectivity from the ISE, we should be able to resolve to SQL and pull rows from a table.
 
-![ISE SQL Get Rows](../media/Scenario-ISE-Logic-Apps-Overview/create-la-4.jpg)
+![ISE SQL Get Rows](../Media/Scenario-ISE-Logic-Apps-Overview/create-la-4.jpg)
 
 We should be able to run the trigger and see that Get Rows will return results, and a 200 Status code.
 
-![ISE SQL Get Rows Success](../media/Scenario-ISE-Logic-Apps-Overview/create-la-5.jpg)
+![ISE SQL Get Rows Success](../Media/Scenario-ISE-Logic-Apps-Overview/create-la-5.jpg)
 
 ## TODOs
 
