@@ -210,7 +210,9 @@ As of current testing, the ISE set up will take **2 hours.**
 
 We'll use the VNET Injection approach for the ISE configuration.
 
-We'll want to search in the Azure Portal for the **Integration Service Environment** to create as a new resource.  We'll want to make sure to select **4 empty subnets** in the **cloud VNET**.
+We'll want to search in the Azure Portal for the **Integration Service Environment** to create as a new resource.  
+
+We'll want to make sure to select **4 empty subnets** in the **cloud VNET**.
 
 ![Set up ISE](../media/Scenario-ISE-Logic-Apps-Overview/create-ise-1.jpg)
 
