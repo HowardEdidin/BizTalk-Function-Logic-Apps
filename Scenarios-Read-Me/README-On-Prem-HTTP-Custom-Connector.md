@@ -132,7 +132,7 @@ We can import sample data to make sure that we're picking up the WSDL in the con
 
 If we're using the ISE Connector, the Container IP (unless the container is using Azure CNM) wouldn't be reachable from the ISE Connector.  Instead, we can use the **container host IP** (assuming that we've set up the container with NAT networking port mapping).
 
-Most of the steps should be pretty similar for configuring.
+Most of the steps should be pretty similar for configuring the custom connector for an ISE.
 
 We'll configure the custom connector with the host.  We'll use the **container host private ip** and a SOAP passthrough.
 
