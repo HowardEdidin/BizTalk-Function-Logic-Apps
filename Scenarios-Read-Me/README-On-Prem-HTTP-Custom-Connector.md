@@ -10,6 +10,7 @@ We'll use a custom connector to call an HTTP endpoint on-prem.
 1. [Install Logic Apps Gateway](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-gateway-install)
 1. [Blog for Logic Apps and Gateway](https://blogs.biztalk360.com/access-on-premise-sql-server-data-from-azure-logic-apps-via-on-premises-data-gateway/)
 1. [Create a Web API and use it with custom connector](https://flow.microsoft.com/en-us/blog/on-premise-apis/)
+1. [Connectors For Logic Apps](https://docs.microsoft.com/en-us/azure/connectors/apis-list)
 
 ### Stand up the WCF Service
 
