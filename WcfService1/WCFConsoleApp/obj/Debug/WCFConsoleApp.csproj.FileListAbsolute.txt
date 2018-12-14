@@ -1,0 +1,7 @@
+C:\Users\angee\source\repos\BizTalk-Function-Logic-Apps\WcfService1\WCFConsoleApp\bin\Debug\WCFConsoleApp.exe.config
+C:\Users\angee\source\repos\BizTalk-Function-Logic-Apps\WcfService1\WCFConsoleApp\bin\Debug\WCFConsoleApp.exe
+C:\Users\angee\source\repos\BizTalk-Function-Logic-Apps\WcfService1\WCFConsoleApp\bin\Debug\WCFConsoleApp.pdb
+C:\Users\angee\source\repos\BizTalk-Function-Logic-Apps\WcfService1\WCFConsoleApp\obj\Debug\WCFConsoleApp.csprojAssemblyReference.cache
+C:\Users\angee\source\repos\BizTalk-Function-Logic-Apps\WcfService1\WCFConsoleApp\obj\Debug\WCFConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\angee\source\repos\BizTalk-Function-Logic-Apps\WcfService1\WCFConsoleApp\obj\Debug\WCFConsoleApp.exe
+C:\Users\angee\source\repos\BizTalk-Function-Logic-Apps\WcfService1\WCFConsoleApp\obj\Debug\WCFConsoleApp.pdb

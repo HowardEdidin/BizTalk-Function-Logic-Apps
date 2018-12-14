@@ -14,6 +14,7 @@ namespace WcfService1
     {
         public string GetData(int value)
         {
+            Console.WriteLine(string.Format("You entered: {0}", value));
             return string.Format("You entered: {0}", value);
         }
 

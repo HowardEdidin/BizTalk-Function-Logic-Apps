@@ -1,4 +1,4 @@
-FROM microsoft/wcf:4.7.1-windowsservercore-1709
+FROM microsoft/wcf:4.7.2-windowsservercore-1803
 
 EXPOSE 80
 

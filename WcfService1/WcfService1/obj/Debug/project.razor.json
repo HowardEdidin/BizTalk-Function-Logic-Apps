@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\users\\angee\\source\\repos\\BizTalk-Function-Logic-Apps\\WcfService1\\WcfService1\\WcfService1.csproj",
+  "TargetFramework": "v4.6.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
