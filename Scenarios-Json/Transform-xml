@@ -1,0 +1,64 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Initialize_variable": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "inputXML",
+                            "type": "String",
+                            "value": "<Request xmlns=\"http://Chubb.Aces20.GeniusIntegration.Schemas.GeniusIntegration\">  <KeyId1 xmlns=\"\">FC013998</KeyId1>  <KeyId2 xmlns=\"\">0</KeyId2>  <CallTypeKeyId xmlns=\"\">3</CallTypeKeyId>  <TransactionTypeId xmlns=\"\">1</TransactionTypeId></Request>"
+                        }
+                    ]
+                },
+                "runAfter": {},
+                "type": "InitializeVariable"
+            },
+            "Response": {
+                "inputs": {
+                    "body": "@body('Transform_XML')",
+                    "headers": {
+                        "Content-type": "text/xml"
+                    },
+                    "statusCode": 200
+                },
+                "kind": "Http",
+                "runAfter": {
+                    "Transform_XML": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Response"
+            },
+            "Transform_XML": {
+                "inputs": {
+                    "content": "@variables('inputXML')",
+                    "integrationAccount": {
+                        "map": {
+                            "name": "inputOutputMap"
+                        }
+                    }
+                },
+                "runAfter": {
+                    "Initialize_variable": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Xslt"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {},
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "schema": {}
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    }
+}
