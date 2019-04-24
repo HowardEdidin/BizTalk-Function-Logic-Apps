@@ -17,7 +17,7 @@ These will describe some of the concepts that we're using in this scenario.
 
 We'll use a logic app to pull from items SharePoint and use the QNA Maker REST API to pass them over to QNA maker.
 
-![Scenario](../Media/Scenario-Sharepoint-Logic-Apps/create-logic-app.PNG 'Scenario')
+![Scenario](../Media/Scenario-Sharepoint-Logic-Apps/sp-scenario.png 'Scenario')
 
 > We could extend this other data sources, and also account for other activities (like Delete / Modify).  For now, we'll work on Add.
 
@@ -26,7 +26,7 @@ We will also assume that we have created a [QNA Maker](https://docs.microsoft.co
 #### Create Logic App using SharePoint Connector
 We'll now create a logic app in the portal to validate that we can read an item from SharePoint and then send it to QNA Maker using the REST API.
 
-![Create a Logic App](../Media/Scenario-Sharepoint-Logic-Apps/scenario.PNG 'Create A Logic App')
+![Create a Logic App](../Media/Scenario-Sharepoint-Logic-Apps/create-logic-app.png 'Create A Logic App')
 
 We'll use a trigger in the logic app.  In this case, we'll use a SharePoint Connector.
 
