@@ -11,6 +11,7 @@ These will describe some of the concepts that we're using in this scenario.
 1. [Azure Functions Overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
 1. [SharePoint Logic App Connector](https://docs.microsoft.com/en-us/azure/connectors/connectors-create-api-sharepoint)
 1. [Logic App Data Gateway](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-gateway-install)
+1. [Connect to On Prem Data with Logic App Data Gateway](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-gateway-connection)
 1. [QNA Maker Overview](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/overview)
 
 ### Scenario
@@ -42,7 +43,7 @@ Select the appropriate SharePoint site and list.
 
 Assuming that we can resolve to SharePoint, we can check the dropdown and select the appropriate list.
 
-> We may need to use the Logic App Data Gateway in order to reach on-prem.  As of right now, there isn't an ISE SharePoint Connector.  If we're using SharePoint online, we should be able to authenticate to SharePoint and resolve to it.
+> For SharePoint on-prem, we may need to use the Logic App Data Gateway in order to reach on-prem.   For this we'll need to [install a Logic App Data Gateway](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-gateway-install) and [Connect to On Prem Data with a Logic App Data Gateway](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-gateway-connection).  As of right now, there isn't an ISE SharePoint Connector.  If we're using SharePoint online, we should be able to authenticate to SharePoint and resolve to it.
 
 We'll now add a function to transform what we get back from SharePoint.
 
