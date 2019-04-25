@@ -55,7 +55,7 @@ We want to ensure that we have an Azure Function created in the subscription.
 
 We will want to use an Azure Function with an HTTP Trigger.
 
-> If we haven't already created an Azure Function, we can go ahead and add it to the subscription.  Please refer to the [Transform JS](../FunctionApps/SharePoint-Logic-Apps/index.js) that we can use in the function app.  We could also expand this js to handle additional scenarios **beyond add, like update/modify, and delete**.  Also, this version of the javascript will assume that there's an item with a property called **Title**.
+> If we haven't already created an Azure Function, we can go ahead and add it to the subscription.  Please refer to the [Cosmos Transform JS](../FunctionApps/SharePoint-Logic-Apps-Cosmos-DB/index.js) that we can use in the function app.  We could also expand this js to handle additional scenarios **beyond add, like update/modify, and delete**.  Also, this version of the javascript will assume that there's an item with a property called **Title**.
 
 ![Add Azure Function](../Media/Scenario-Sharepoint-Logic-Apps/add-azure-function-2.png 'Add Azure Function')
 
