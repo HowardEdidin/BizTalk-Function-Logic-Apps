@@ -71,7 +71,7 @@ We can now add in the HTTP Connector to PATCH on the [QNA Maker API](https://wes
 
 We will now add in one more HTTP Connector to POST on the [QNA Maker API](https://westus.dev.cognitive.microsoft.com/docs/services/5a93fcf85b4ccd136866eb37/operations/5ac266295b4ccd1554da7600) to publish the changes.
 
-![Post QNA Maker](../Media/Scenario-Sharepoint-Logic-Apps/qna-patch.png 'Post QNA Maker')
+![Post QNA Maker](../Media/Scenario-Sharepoint-Logic-Apps/qna-post.png 'Post QNA Maker')
 
 ### Verify the Steps
 
