@@ -9,10 +9,10 @@
    - Make sure that the four ISE subnets are added to the list of virtual networks that are allowed to access Azure Storage
 1. [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
 1. Powershell Scripts  
-   -  spn-script.ps1
-   - on-prem-smb-script.ps1
-   - azure-file-smb-script.ps1
-   - copy-script.ps1
+   - [spn-script.ps1](../Scripts/spn-script.ps1)
+   - [on-prem-smb-script.ps1](../Scripts/on-prem-smb-script.ps1)
+   - [azure-file-smb-script.ps1](../Scripts/azure-file-smb-script.ps1)
+   - [copy-script.ps1](../Scripts/copy-script.ps1)
 
 ## Set-up
 
@@ -30,20 +30,20 @@
 1. In Powershell, log on to Azure with `az login --use-device-code`
 1. Set your Azure Subscription with `az account set --subscription SUBSCRIPTION_ID` and verify with `az account show`
 1. Once you've successfully set-up your Azure credentials on Powershell, run the following scripts:
-   - `spn-script.ps1`  
+   - [spn-script.ps1](../Scripts/spn-script.ps1)
    This script is for creating Azure Storage File Share and Service Principal  
    **\*Note**: Before running the script, make sure you replace the temporary values in the script with your desired values  
    To verify that the script ran successfully:  
       1. Open Azure Storage Explorer and look for your storage account and go to the File Share section.  
       1. Verify that the folder you created from script exists.  
-   - `on-prem-smb-script.ps1`   
+   - [on-prem-smb-script.ps1](../Scripts/on-prem-smb-script.ps1)
    This script is for the ISE VM to access the folder on on-prem-VM  
    **\*Note**: Before running the script, make sure you create a file-share folder on the on-prem VM and replace the temporary values in the script with your desired values
    To verify that the script ran successfully:  
       1. Make sure that the file-share folder has been created on the ISE VM.
       1. Connect to the on-prem VM and open the file-share folder. Create a folder/file inside the file-share folder.
       1. Verify that you can see the same file/folder on the ISE VM's file-share folder.
-   - `azure-file-smb-script.ps1`   
+   - [azure-file-smb-script.ps1](../Scripts/azure-file-smb-script.ps1)
    This script is for the ISE VM to create link with Azure Files.  
    **\*Note**: Before running the script, make sure you replace the temporary values in the script with your desired values  
    To verify that the script ran successfully:  
@@ -53,7 +53,7 @@
 ### Task Scheduler
 
 #### Verifying copyscript.ps1
-1. Before creating a task on Task Scheduler, run the `copyscript.ps1` first to ensure that the script works
+1. Before creating a task on Task Scheduler, run the [copy-script.ps1](../Scripts/copy-script.ps1) first to ensure that the script works
 1. If the script works as expected, it should copy over folders and files from the file-share folder with the on-prem VM to the file-share folder with Azure File Share
 
 #### Creating Task on Task Scheduler
